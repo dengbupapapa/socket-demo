@@ -1,0 +1,178 @@
+/* css reset www.admin10000.com */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    color: #555;
+    background: #fff;
+}
+td,
+th,
+caption
+{
+    font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-size: 100%;
+    font-weight: normal;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var
+{
+    font-weight: normal;
+    font-style: normal;
+}
+a
+{
+    text-decoration: none;
+
+    color: #555;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+img
+{
+    border: none;
+}
+ol,
+ul,
+li
+{
+    list-style: none;
+}
+input,
+textarea,
+select,
+button
+{
+    font: 14px Verdana,Helvetica,Arial,sans-serif;
+}
+table
+{
+    border-collapse: collapse;
+}
+html
+{
+    overflow-y: scroll;
+}
+/* css common */
+.clear:after
+{
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: '.';
+}
+.clear
+{
+    *zoom: 1;
+}
+
+
+.chatWord
+{
+    margin: 20px;
+    padding: 20px;
+
+    border: solid 2px #eee;
+}
+
+.chatWord ul li
+{
+    padding: 5px;
+	margin-bottom: 5px;
+    color: #808080;
+}
+
+.chatWord ul li.OK{
+	color:#fff;
+}
+
+.chatWord ul li em
+{
+    margin-right: 20px;
+}
+
+.chatWord ul li span
+{
+	float:right;
+}
+
+.chatWord ul li p
+{
+	border-top: dashed 1px #fff;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+
+.form
+{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.announcement
+{
+    background: red;
+}
+.thirdPerson
+{
+    background: #47c3ce;
+}
+.me
+{
+    background: #6449d8;
+}
+
+#userName{
+	padding:20px 0 0 20px;
+}
