@@ -4,13 +4,17 @@ var cookieParser = require('cookie-parser');
 var session = require("express-session");
 var RedisStore = require('connect-redis')(session);
 var sessionMiddleware = session({
+    store: new RedisStore({
+        host: '127.0.0.1',
+        port: 6379,
+        db: 0
+    }),
+    resave: false,
     saveUninitialized: true,
-    resave: true,
-    secret: 'secret-session',
-    // store: new RedisStore({
-    //     host: '／',
-    //     port: 6379
-    //   }) // 利用redis存储session
+    secret: 'keyboard cat',
+    cookie: {
+        maxAge: 100000
+    }
 });
 var server = app.listen(8000, function() {
     console.log('server is localhost:3000');
