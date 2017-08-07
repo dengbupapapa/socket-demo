@@ -4,11 +4,11 @@ var cookieParser = require('cookie-parser');
 var session = require("express-session");
 var RedisStore = require('connect-redis')(session);
 var sessionMiddleware = session({
-    store: new RedisStore({
-        host: '127.0.0.1',
-        port: 6379,
-        db: 0
-    }),
+    // store: new RedisStore({
+    //     host: '127.0.0.1',
+    //     port: 6379,
+    //     db: 0
+    // }),
     resave: false,
     saveUninitialized: true,
     secret: 'keyboard cat',
@@ -17,7 +17,7 @@ var sessionMiddleware = session({
     }
 });
 var server = app.listen(8000, function() {
-    console.log('server is localhost:3000');
+    console.log('server is localhost:8000');
 });
 
 var io = require('socket.io');
@@ -66,7 +66,7 @@ ios.on('connection', function(client) {
 });
 
 app.get('/', function(req, res, next) {
-    req.session.demoId = req.query.user;
+    req.session.demoId = req.query.user || 'none';
     res.sendFile(__dirname + '/public/demo.html');
 });
 
